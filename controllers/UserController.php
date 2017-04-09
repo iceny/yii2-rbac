@@ -7,6 +7,14 @@ use app\models\User;
 use app\service\UrlService;
 
 class UserController extends BaseController{
+
+      //用户登录页面
+      public function actionLogin(){
+      	     return $this->render("login");
+      }
+
+
+
 	  //伪登录业务方法
 	  public function actionVlogin(){
 	  	     $uid=$this->get("uid",0);
