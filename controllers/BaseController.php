@@ -6,7 +6,13 @@ use Yii;
 
 //所有控制器的基类，并且集成常用公用方法
 class BaseController extends Controller{
-       
+
+	   protected $auth_cookie_name="lzh";
+	   protected $current_user=null;   //当前登录人信息
+       protected $allowAllAction=[
+              'user/login',
+              'user/vlogin'
+       ];
        //统一获取post参数的方法
        public function post($key,$default=""){
               return Yii::$app->request->post($key,$default);

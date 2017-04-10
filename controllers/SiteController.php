@@ -11,7 +11,7 @@ use app\models\ContactForm;
 
 use app\controllers\BaseController;
 
-class SiteController extends BaseController
+class SiteController extends Controller
 {
     /**
      * @inheritdoc
@@ -62,6 +62,7 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
+        
         return $this->render('index');
     }
 

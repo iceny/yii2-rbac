@@ -26,13 +26,14 @@ class UserController extends BaseController{
 	  	     	return $thhis->redirect(UrlService::buildUrl("/"));
 	  	     }
 	  	     //cookie保存用户的登录状态,cookie需加密，规则：user_auth_token + "#" + uid
-	  	     $user_auth_token=md5($user_info['id'].$user_info['name'].$user_info['email'].$_SERVER['HTTP_USER_AGENT']);
+	  	     // $user_auth_token=md5($user_info['id'].$user_info['name'].$user_info['email'].$_SERVER['HTTP_USER_AGENT']);
 
-	  	     $cookie_target=Yii::$app->response->cookies;
-	  	     $cookie_target->add(new\yii\web\Cookie([
-                       "name"  => "lzh",
-                       "value" => $user_auth_token."#".$user_info['id']
-	  	     	])); 
+	  	     // $cookie_target=Yii::$app->response->cookies;
+	  	     // $cookie_target->add(new\yii\web\Cookie([
+         //               "name"  => "lzh",
+         //               "value" => $user_auth_token."#".$user_info['id']
+	  	     // 	])); 
+	  	     $this->createLoginStatus($user_info);
 	  	     return $this->redirect(UrlService::buildUrl("/"));
 	  }
 }
