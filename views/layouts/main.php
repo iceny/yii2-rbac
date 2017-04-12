@@ -37,7 +37,7 @@ AppAsset::register($this);
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
       </ul>
-      <p class="navbar-text navbar-right">Hi,xxx</p>
+      <p class="navbar-text navbar-right">Hi,{}</p>
     </div>
   </div>
 </nav>
