@@ -192,6 +192,4 @@ vendor/bin/codecept run functional,unit -- --coverage-html --coverage-xml
 
 You can see code coverage output under the `tests/_output` directory.
 =======
-# yii2-rbac
-RBAC权限管理
->>>>>>> b96f4dcd0702cad896255cc5fa179f2c049a19b3
+
